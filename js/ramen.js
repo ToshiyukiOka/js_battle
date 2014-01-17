@@ -5,19 +5,32 @@
     defaults: {
       title: "default",
       completed: false
-    },
+    }
     // Modelのメソッドを作成
     //toggle: function(){
     //  this.set('completed', !this.get('completed'));
     //}
   });
-
   var task1 = new Task();
+
+  var Task2 = Backbone.Model.extend({
+    defaults: {
+      title: "default2",
+      completed: true
+    }
+  });
+  var task2 = new Task2();
 
 
   // VIew
   var TaskView = Backbone.View.extend({
     tagName: 'li',
+    events: {
+      "click": "startTimer"
+    },
+    startTimer: function(){
+      alert("start");
+    },
     template: _.template( $('#task-template').html() ),
     render: function() {
       var template = this.template( this.model.toJSON() );
@@ -26,10 +39,10 @@
     }
   });
 
-  // Collection
 
+  // Collection
   var Tasks = Backbone.Collection.extend({
-    model: Task
+    model: Task2
   });
 
   var TasksView = Backbone.View.extend({
@@ -45,7 +58,6 @@
 
   var tasks = new Tasks([
     {
-      title: 'task1',
       completed: true
     },
     {
@@ -55,6 +67,8 @@
       title: 'task3'
     }
   ]);
+
   var tasksView = new TasksView({collection: tasks});
   $('#tasks').html(tasksView.render().el);
-})();
+}
+)();
