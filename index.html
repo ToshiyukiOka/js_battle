@@ -4,7 +4,9 @@
     <meta charaset="utf-8">
     <title>Backbone Timer</title>
     <link rel="stylesheet" href="css/ramen.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <link rel="stylesheet" href="css/timer.css">
+    <script src="http://code.angularjs.org/angular-1.0.0rc11.min.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/common.js"></script>
 
     <!-- box2djs -->
@@ -14,21 +16,21 @@
 
   </head>
   <body ng-app style="background-image:url(img/bg2.jpg);">
-    <img src="img/gozilla.png" class="gozilla">
-    <img src="img/ultraman.png" class="ultraman" id="ultraman">
-    <div ng-controller="AlbumCtrl">{{counter}}</div>
 
+    <div ng-controller="ImageArea">
+      <img src="img/gozilla.png" class="gozilla" ng-click="gozillaCountUp()">
+      <img src="img/ultraman.png" class="ultraman" id="ultraman" ng-click="ultramanCountUp()">
+    </div>
+    <div class="timer-area">
+      <div ng-controller="AlbumCtrl" class="counter">
+        {{counter}}
+      </div>
+    </div>
 
-
-  <div id="imageWraper1">
-    <img src="img/gozilla.png" class="box2d gozilla">
-    <img src="img/ultraman.png" class="box2d ultraman" id="ultraman">
-  </div> 
-
-
-
-
-
+    <div id="imageWraper1">
+      <img src="img/gozilla.png" class="box2d gozilla">
+      <img src="img/ultraman.png" class="box2d ultraman" id="ultraman">
+    </div> 
 
   </body>
 </html>
