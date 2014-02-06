@@ -4,18 +4,12 @@
     <meta charaset="utf-8">
     <title>Backbone Timer</title>
     <link rel="stylesheet" href="css/ramen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/common.js"></script>
   </head>
-  <body style="background-image:url(img/bg2.jpg);">
+  <body ng-app style="background-image:url(img/bg2.jpg);">
     <img src="img/gozilla.png" class="gozilla">
     <img src="img/ultraman.png" class="ultraman" id="ultraman">
-    <div id="tasks">
-    </div>
-    <script type="text/template" id="task-template">
-      <%- title %>
-    </script>
-    <script src="js/underscore.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/backbone.js"></script>
-    <script src="js/ramen.js"></script>
+    <div ng-controller="AlbumCtrl">{{counter}}</div>
   </body>
 </html>
