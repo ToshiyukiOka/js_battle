@@ -84,6 +84,7 @@ input, select {
 
 /* custom */
 html, body {
+  background-color: #000;
   min-height: 100%;
   width: 100%;
 }
