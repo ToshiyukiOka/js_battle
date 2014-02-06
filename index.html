@@ -9,17 +9,13 @@
     <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/common.js"></script>
 
-    <!-- box2djs -->
-    <script src="js/prototype-1.6.0.2.js"></script>
-    <script src="js/box2d.js"></script>
-    <script src="js/box2d.js"></script>
 
   </head>
   <body ng-app style="background-image:url(img/bg2.jpg);">
 
     <div ng-controller="ImageArea">
-      <img src="img/gozilla.png" class="gozilla" ng-click="gozillaCountUp()">
-      <img src="img/ultraman.png" class="ultraman" id="ultraman" ng-click="ultramanCountUp()">
+      <img src="img/gozilla.png" class="gozilla box2d" ng-click="gozillaCountUp()">
+      <img src="img/ultraman.png" class="ultraman box2d" id="ultraman" ng-click="ultramanCountUp()">
     </div>
     <div class="timer-area">
       <div ng-controller="AlbumCtrl" class="counter">
@@ -27,10 +23,19 @@
       </div>
     </div>
 
-    <div id="imageWraper1">
-      <img src="img/gozilla.png" class="box2d gozilla">
-      <img src="img/ultraman.png" class="box2d ultraman" id="ultraman">
-    </div> 
+    <!-- box2djs -->
+    <script src="js/prototype-1.6.0.2.js"></script>
+    <script src="js/box2d.js"></script>
+    <script src="js/protoBox2d.js"></script>
+    <script src="js/jquery-1.3.2.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      var j$ = jQuery.noConflict();
+      
+      j$(function() {
+        new protoBox2d().init();
+      });
+    </script>
 
   </body>
 </html>
