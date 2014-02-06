@@ -9,8 +9,14 @@
     <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/common.js"></script>
   </head>
-  <body ng-app style="background-image:url(img/bg2.jpg);">
-    <div ng-controller="ImageArea">
+  <body ng-app ng-controller="ImageArea" style="background-image:url(img/bg2.jpg);">
+    <header>
+      <div class="meter">
+        <div class="leftBar left-bar">GOZILLA:{{gozillaCounter}}</div>
+        <div class="rightBar right-bar">ULTRAMAN:{{ultramanCounter}}</div>
+      </div>
+    </header>
+    <div>
       <img src="img/gozilla.png" class="gozilla" ng-click="gozillaCountUp()">
       <img src="img/ultraman.png" class="ultraman" id="ultraman" ng-click="ultramanCountUp()">
     </div>

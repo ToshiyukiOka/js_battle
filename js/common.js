@@ -22,7 +22,7 @@ function ImageArea($scope) {
     console.log($scope.gozillaCounter);
   }
   $scope.ultramanCountUp = function(){
-    $scope.gozillaCounter++
-    console.log($scope.gozillaCounter);
+    $scope.ultramanCounter++
+    console.log($scope.ultramanCounter);
   }
 }
