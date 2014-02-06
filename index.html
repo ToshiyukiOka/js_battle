@@ -9,21 +9,20 @@
     <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
     <script language="javascript" type="text/javascript" src="js/common.js"></script>
 
-
   </head>
-  <body ng-app ng-controller="ImageArea" style="background-image:url(img/bg2.jpg);">
-    <header>
-      <div class="meter">
-        <div class="leftBar left-bar">GOZILLA:{{gozillaCounter}}</div>
-        <div class="rightBar right-bar">ULTRAMAN:{{ultramanCounter}}</div>
-      </div>
-    </header>
+  <body ng-app ng-controller="AlbumCtrl" style="background-image:url(img/bg2.jpg);">
     <div>
-      <img src="img/gozilla.png" class="gozilla" ng-click="gozillaCountUp()">
-      <img src="img/ultraman.png" class="ultraman" id="ultraman" ng-click="ultramanCountUp()">
+      <header>
+        <div class="meter">
+          <div class="leftBar left-bar">GOZILLA:{{gozillaCounter}}</div>
+          <div class="rightBar right-bar">ULTRAMAN:{{ultramanCounter}}</div>
+        </div>
+      </header>
+      <img src="img/gozilla.png" class="gozilla box2d" ng-click="gozillaCountUp()">
+      <img src="img/ultraman.png" class="ultraman box2d" id="ultraman" ng-click="ultramanCountUp()">
     </div>
     <div class="timer-area">
-      <div ng-controller="AlbumCtrl" class="counter">
+      <div class="counter">
         {{counter}}
       </div>
     </div>
