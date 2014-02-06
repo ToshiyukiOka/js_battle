@@ -85,7 +85,7 @@ input, select {
 /* custom */
 html, body {
   background-color: #000;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
 }
 body {
@@ -100,7 +100,7 @@ body {
   position: fixed;
 }
 .ultraman {
-  bottom: 200px;
+  bottom: 100px;
   height: 350px;
   right: 300px;
   position: fixed;
